@@ -1,0 +1,85 @@
+{
+  "name": "virtualish",
+  "version": "0.1.0",
+  "description": "Starter Reason Esy Pesy Project",
+  "esy": {
+    "build": "dune build -p #{self.name}",
+    "buildDev": "refmterr dune build -p #{self.name}",
+    "NOTE": "Optional release Section. Customizes result of `esy release`",
+    "release": {
+      "releasedBinaries": [
+        "VirtualishApp.exe"
+      ]
+    },
+    "buildEnv": {
+      "ODOC_SYNTAX": "re"
+    }
+  },
+  "buildDirs": {
+    "test": {
+      "imports": [
+        "Library = require('virtualish/library')",
+        "Rely = require('rely/lib')"
+      ],
+      "flags": [
+        "-linkall",
+        "-g",
+        "-w",
+        "-9"
+      ]
+    },
+    "testExe": {
+      "imports": [
+        "Test = require('virtualish/test')"
+      ],
+      "bin": {
+        "RunVirtualishTests.exe": "RunVirtualishTests.re"
+      }
+    },
+    "library": {
+      "imports": [
+        "Console = require('console/lib')",
+        "Pastel = require('pastel/lib')"
+      ]
+    },
+    "bin": {
+      "imports": [
+        "VirtualishHack = require('virtualish/hack')"
+      ],
+      "bin": {
+        "Virtualish.exe": "Virtualish.re"
+      }
+    }
+  },
+  "scripts": {
+    "start": "esy x VirtualishApp.exe",
+    "test": "esy x RunVirtualishTests.exe",
+    "doc": "esy dune build @doc",
+    "doc-path": "esy echo #{self.target_dir}/default/_doc/_html/index.html",
+    "makeTuareg": "esy sh -c \"echo '(* -*- tuareg -*- *)' > ./virtualishAttempt/dune && refmt #{self.root}/virtualishAttempt/Dune.re --print ml >> ./virtualishAttempt/dune\""
+  },
+  "dependencies": {
+    "@opam/dune": "*",
+    "@reason-native/console": "*",
+    "@reason-native/pastel": "*",
+    "@reason-native/rely": "*",
+    "@esy-ocaml/reason": "*",
+    "ocaml": "~4.7.0",
+    "moodules": "*",
+    "@reason-native/fp": "*",
+    "@reason-native/fs": "*"
+  },
+  "devDependencies": {
+    "refmterr": "*",
+    "@opam/merlin": "*",
+    "ocaml": "~4.7.0",
+    "@opam/odoc": "*",
+    "@pesy/esy-pesy": "0.1.0-alpha.2"
+  },
+  "resolutions": {
+    "refmterr": "link:../reason-native/refmterr.json",
+    "moodules": "link:../moodules/package.json",
+    "@reason-native/fp": "facebookexperimental/reason-native:fp.json#a7bb6356437bf2f7e1ded36a2db77ec7d659a67f",
+    "@reason-native/fs": "facebookexperimental/reason-native:fs.json#a7bb6356437bf2f7e1ded36a2db77ec7d659a67f"
+  }
+}

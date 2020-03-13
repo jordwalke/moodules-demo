@@ -1,0 +1,12 @@
+(library (name VirtualishLibrary) (public_name virtualish.library)
+    (modules (:standard \ VirtualishLibraryPesyModules))
+    (libraries virtualish.library.pesy-modules)
+    (flags -open VirtualishLibraryPesyModules))
+(library (public_name virtualish.library.pesy-modules)
+    (name VirtualishLibraryPesyModules)
+    (modules VirtualishLibraryPesyModules)
+    (libraries console.lib pastel.lib))
+(rule
+    (with-stdout-to VirtualishLibraryPesyModules.re
+        (run echo  "module Console = Console;\
+                  \nmodule Pastel = Pastel;")))

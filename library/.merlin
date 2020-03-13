@@ -1,0 +1,17 @@
+EXCLUDE_QUERY_DIR
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/ocaml-4.7.1004-d00f8396/lib/ocaml
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/opam__s__re-opam__c__1.9.0-a68a625a/lib\re
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/opam__s__seq-opam__c__base-2e840844/lib\seq
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__console-0.1.0-3f4d56fd/lib\console\lib
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__pastel-0.3.0-d9a8a841/lib\pastel\internal
+B C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__pastel-0.3.0-d9a8a841/lib\pastel\lib
+B C:/Users/jwalke/github/virtualish/_esy/default/store/b/virtualish-4784d964\default/library/.VirtualishLibrary.objs/byte
+B C:/Users/jwalke/github/virtualish/_esy/default/store/b/virtualish-4784d964\default/library/.VirtualishLibraryPesyModules.objs/byte
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/ocaml-4.7.1004-d00f8396/lib/ocaml
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/opam__s__re-opam__c__1.9.0-a68a625a/lib\re
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/opam__s__seq-opam__c__base-2e840844/lib\seq
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__console-0.1.0-3f4d56fd/lib\console\lib
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__pastel-0.3.0-d9a8a841/lib\pastel\internal
+S C:/Users/jwalke/.esy/3________________________________________________________________/i/reason_native__s__pastel-0.3.0-d9a8a841/lib\pastel\lib
+S .
+FLG -open VirtualishLibrary -open VirtualishLibraryPesyModules -w -40

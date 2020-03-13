@@ -1,0 +1,7 @@
+EXCLUDE_QUERY_DIR
+B C:/Users/jwalke/github/virtualish/_esy/default/store/b/virtualish-4784d964\default/bin/.Virtualish.eobjs/byte
+B C:/Users/jwalke/github/virtualish/_esy/default/store/b/virtualish-4784d964\default/bin/.VirtualishBinPesyModules.objs/byte
+B C:/Users/jwalke/github/virtualish/_esy/default/store/b/virtualish-4784d964\default/virtualishHack/.VirtualishHack.objs/byte
+S .
+S ../virtualishHack
+FLG -open VirtualishBinPesyModules -w -40

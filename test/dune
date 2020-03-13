@@ -1,0 +1,12 @@
+(library (name VirtualishTest) (public_name virtualish.test)
+    (modules (:standard \ VirtualishTestPesyModules))
+    (libraries virtualish.test.pesy-modules)
+    (flags -linkall -g -w -9 -open VirtualishTestPesyModules))
+(library (public_name virtualish.test.pesy-modules)
+    (name VirtualishTestPesyModules) (modules VirtualishTestPesyModules)
+    (libraries rely.lib virtualish.library))
+(rule
+    (with-stdout-to VirtualishTestPesyModules.re
+        (run echo
+             "module Library = VirtualishLibrary;\
+            \nmodule Rely = Rely;")))

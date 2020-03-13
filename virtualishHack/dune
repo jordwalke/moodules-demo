@@ -1,0 +1,13 @@
+(library
+  (public_name virtualish.hack)
+
+ ; implements virtualish.virtual handled by moodule)
+  (name VirtualishHack)
+  (libraries )
+)
+(include_subdirs no)
+(rule (target VirtualInterfaceInSubdir.rei)(action (copy# ./../virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei VirtualInterfaceInSubdir.rei)))
+(rule (target VirtualModule.re)(action (copy# ./../virtualishVirtual/VirtualModule.re VirtualModule.re)))
+(rule (target VirtualInterface.rei)(action (copy# ./../virtualishVirtual/VirtualInterface.rei VirtualInterface.rei)))
+(rule (target VirtualInterfaceInSubdir.re)(action (copy# ./subdir/VirtualInterfaceInSubdir.re VirtualInterfaceInSubdir.re)))
+(rule (target dune-projectbackup)(action (copy# ./subdir/dune-projectbackup dune-projectbackup)))

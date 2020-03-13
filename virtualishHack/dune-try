@@ -1,0 +1,19 @@
+(library
+  (public_name virtualish.hack)
+
+ ; implements virtualish.virtual handled by moodule)
+  (name VirtualishHack)
+  (libraries )
+)
+(rule (target VirtualInterfaceInSubdir.rei.tmp)(action (copy# ./../virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei ./VirtualInterfaceInSubdir.rei.tmp)))
+(rule (target VirtualInterfaceInSubdir.rei)
+      (deps VirtualInterfaceInSubdir.rei.tmp)
+      (action
+        (progn
+         (run cp VirtualInterfaceInSubdir.rei.tmp ./subdir/VirtualInterfaceInSubdir.rei)))
+
+      )
+(rule (target VirtualModule.re)(action (copy# ./../virtualishVirtual/VirtualModule.re ./VirtualModule.re)))
+(rule (target VirtualInterface.rei)(action (copy# ./../virtualishVirtual/VirtualInterface.rei ./VirtualInterface.rei)))
+
+(include_subdirs unqualified)

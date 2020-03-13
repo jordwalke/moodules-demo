@@ -1,0 +1,11 @@
+(executable (name RunVirtualishTests)
+    (modules (:standard \ VirtualishTestExePesyModules))
+    (public_name RunVirtualishTests.exe)
+    (libraries virtualish.testExe.pesy-modules)
+    (flags -open VirtualishTestExePesyModules))
+(library (public_name virtualish.testExe.pesy-modules)
+    (name VirtualishTestExePesyModules)
+    (modules VirtualishTestExePesyModules) (libraries virtualish.test))
+(rule
+    (with-stdout-to VirtualishTestExePesyModules.re
+        (run echo "module Test = VirtualishTest;")))

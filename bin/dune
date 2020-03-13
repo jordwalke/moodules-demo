@@ -1,0 +1,10 @@
+(executable (name Virtualish)
+    (modules (:standard \ VirtualishBinPesyModules))
+    (public_name Virtualish.exe) (libraries virtualish.bin.pesy-modules)
+    (flags -open VirtualishBinPesyModules))
+(library (public_name virtualish.bin.pesy-modules)
+    (name VirtualishBinPesyModules) (modules VirtualishBinPesyModules)
+    (libraries virtualish.hack))
+(rule
+    (with-stdout-to VirtualishBinPesyModules.re
+        (run echo "module VirtualishHack = VirtualishHack;")))
