@@ -1,0 +1,4 @@
+
+(rule (target VirtualInterfaceInSubdir.rei)
+      (action (copy# %{workspace_root}/virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei VirtualInterfaceInSubdir.rei)))
+; (rule (target VirtualInterfaceInSubdir.rei)(action (copy# ./../virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei VirtualInterfaceInSubdir.rei)))
