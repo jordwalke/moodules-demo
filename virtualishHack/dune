@@ -7,7 +7,6 @@
 )
 (include_subdirs unqualified)
 ; (rule (target VirtualInterfaceInSubdir.rei)(action (copy# ./../virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei VirtualInterfaceInSubdir.rei)))
-(rule (target VirtualInterfaceInSubdir.rei)(action (copy# ./../virtualishVirtual/subdir/VirtualInterfaceInSubdir.rei ./subdir/VirtualInterfaceInSubdir.rei)))
 
 (rule (target VirtualModule.re)(action (copy# ./../virtualishVirtual/VirtualModule.re VirtualModule.re)))
 (rule (target VirtualInterface.rei)(action (copy# ./../virtualishVirtual/VirtualInterface.rei VirtualInterface.rei)))
